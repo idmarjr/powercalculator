@@ -6109,6 +6109,11 @@ var impactComp = {render: function(){var _vm=this;var _h=_vm.$createElement;var 
             // they should never be changes manually;
             this.impactByMetricMin = impactByMetricObj.min;
             this.impactByMetricMax = impactByMetricObj.max;
+        },
+        relativeImpact () {
+            if (this.isReadOnly) {
+                this.updateData();
+            }
         }
     },
     methods: {
